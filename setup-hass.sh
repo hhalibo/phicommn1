@@ -5,7 +5,6 @@ echo "setup home-assistant install for Hassbian"
 echo
 
 sudo hassbian-config install homeassistant;
-exit;
 clear;
 sudo chown -R homeassistant:homeassistant /srv/homeassistant;
 sudo systemctl stop home-assistant@homeassistant.service;
