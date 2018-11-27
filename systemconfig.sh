@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo
-echo "MUST BE ROOT，Running System Configurations"
+echo "MUST BE in ROOT，Running System Configurations"
 echo
 
 echo "stop serial-getty@ttyS0.service"
