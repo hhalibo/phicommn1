@@ -17,6 +17,7 @@ sudo add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/ubun
 
 echo "Redo apt update"
 sudo apt update
+sudo apt install -y avahi-daemon avahi-discover libnss-mdns libavahi-compat-libdnssd-dev g++ gcc jq socat
 
 echo "Make sure you are about to install from the Docker repo instead of the default Ubuntu repo"
 apt-cache policy docker-ce
