@@ -15,5 +15,6 @@ sudo apt update;
 sudo apt upgrade -y;
 sudo apt install sudo net-tools -y;
 sudo apt autoremove;
+sudo nano /etc/sudoers;
 sudo dpkg-reconfigure tzdata;
-sudo nano /etc/sudoers
+reboot
