@@ -13,7 +13,7 @@ echo "Run apt-update"
 sudo cp /boot/dtb/BCM4345C0.hcd  /lib/firmware/brcm;
 sudo apt update; 
 sudo apt upgrade -y;
-sudo apt install sudo net-tools -y;
+sudo apt install sudo net-tools zip -y;
 sudo apt autoremove;
 sudo nano /etc/sudoers;
 sudo dpkg-reconfigure tzdata;
