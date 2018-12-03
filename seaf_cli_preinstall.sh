@@ -4,6 +4,12 @@ echo
 echo "Install seafile-cli script for Hassbian"
 echo
 
+if [ `whoami` != "homeassistant" ];then
+    echo "only user=homeassitant can not run this shell script"
+    exit 0
+fi
+
+
 sudo add-apt-repository ppa:seafile/seafile-client -y
 sudo apt-get update
 sudo apt-get install zip
