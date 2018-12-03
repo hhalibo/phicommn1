@@ -4,14 +4,6 @@ echo
 echo "home-assistant install for Hassbian"
 echo
 
-if [ `whoami` != "pi" ];then
-    echo "ONLY user=pi CAN RUN this shell script"
-    exit 1
-fi 
-if [ `whoami` == "pi" ];then
-    echo "ONLY user=pi CAN RUN this shell script"
-    exit 0
-fi 
 echo "Running apt-get preparation"
 sudo apt update;
 sudo apt upgrade -y;
