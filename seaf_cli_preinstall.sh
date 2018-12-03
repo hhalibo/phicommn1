@@ -5,7 +5,7 @@ echo "Install seafile-cli script for Hassbian"
 echo
 
 if [ `whoami` != "homeassistant" ];then
-    echo "only user=homeassitant can not run this shell script"
+    echo "!!! ONLY user=homeassitant CAN RUN THIS SHELL SCRIPT!!!"
     exit 0
 fi
 
