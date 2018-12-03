@@ -4,10 +4,10 @@ echo
 echo "Install seafile-cli script for Hassbian"
 echo
 
-if [ `whoami` != "homeassistant" ];then
-    echo "!!! ONLY user=homeassitant CAN RUN THIS SHELL SCRIPT!!!"
-    exit 0
-fi
+#if [ `whoami` != "homeassistant" ];then
+#    echo "!!! ONLY user=homeassitant CAN RUN THIS SHELL SCRIPT!!!"
+#    exit 0
+#fi
 
 
 sudo add-apt-repository ppa:seafile/seafile-client -y
