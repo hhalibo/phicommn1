@@ -1,0 +1,131 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 37.8323
+  longitude: 112.5443
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 790
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Asia/Chongqing
+  # Customization file
+  customize: !include customize.yaml
+  packages: !include_dir_named packages
+  # packages: !include_dir_named packages
+
+# # Show links to resources in log and frontend
+# zone:
+  # - name: Office
+    # latitude: 37.8323
+    # longitude: 112.5443
+    # radius: 250
+    # icon: mdi:briefcase
+
+# # Enables the frontend
+# frontend:
+  # extra_html_url:
+    # - /local/custom_ui/state-card-custom-ui.html
+    # - /local/custom_ui/state-card-weather.html
+  # extra_html_url_es5:
+    # - /local/custom_ui/state-card-custom-ui-es5.html
+    # - /local/custom_ui/state-card-weather.html
+
+# Enables configuration UI
+config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Sensors
+sensor:
+  # Weather prediction
+  - platform: yr
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
+
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  client_id: home-assistant-1
+  keepalive: 60
+  #服务器用户名
+  username: pi
+  #密码
+  password: raspberry
+  protocol: 3.1.1
+
+
+recorder:
+  purge_interval: 7
+  purge_keep_days: 7
+  db_url: mysql://hass:159753000@127.0.0.1/hassdatabase?charset=utf8
+
+
+logger:
+  #default: error
+#homekit:
+  #name: XfyuanLV
+
+http:  
+  trusted_networks:
+    - 127.0.0.1
+    - 192.168.1.0/24
+  api_password: 76682808280
+
+shell_command:
+  backup: bash ~/autobackup.sh
+
+
+zone:
+  - name: Office
+    latitude: 37.8323
+    longitude: 112.5443
+    radius: 250
+    icon: mdi:briefcase
+frontend:
+  extra_html_url:
+    - /local/custom_ui/state-card-custom-ui.html
+    - /local/custom_ui/state-card-weather.html
+  extra_html_url_es5:
+    - /local/custom_ui/state-card-custom-ui-es5.html
+    - /local/custom_ui/state-card-weather.html
