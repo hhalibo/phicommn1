@@ -14,7 +14,9 @@ sudo apt install bluetooth avahi-daemon python3-venv  python3-pip python3-dev li
 sudo dpkg -i  hassbian-scripts_0.6.deb;
 sleep 5
 sudo hassbian-config show;
+sleep 3
 sudo mv /opt/hassbian/suites/install_homeassistant.sh /opt/hassbian/suites/install_homeassistant.sh.bak
+sleep 3
 
 sudo cat >> /opt/hassbian/suites/install_homeassistant.sh <<'EOF'
 #!/bin/bash
