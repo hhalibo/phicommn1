@@ -18,5 +18,6 @@ sudo apt install bluetooth avahi-daemon python3-venv  python3-pip python3-dev li
 sudo apt autoremove;
 sudo nano /etc/sudoers;
 sudo dpkg-reconfigure tzdata;
+sudo nmtui-edit;
 sudo nmtui
 reboot
