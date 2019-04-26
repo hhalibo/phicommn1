@@ -7,7 +7,7 @@ echo
 echo "Running apt-get preparation"
 sudo apt-get update
 
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 
 echo "add the GPG key for the official Docker repository to your system"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
