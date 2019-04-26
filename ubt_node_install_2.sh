@@ -39,7 +39,7 @@ sudo npm install node-red-contrib-pushbear;
 sudo npm install node-red-contrib-moment;
 sudo npm install node-red-contrib-simpletime;
 
-echo "All Done.Restart Nodered!PLEASE CTRL+C!PLEASE CTRL+C!PLEASE CTRL+C!PLEASE CTRL+C!"
+echo "All Done.Restart PLS use 'sudo systemctl status nodered.service' to check"
 sudo systemctl restart nodered.service
 
 echo
