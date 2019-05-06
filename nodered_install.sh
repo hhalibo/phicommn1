@@ -55,6 +55,7 @@ sudo npm install node-red-dashboard;
 sudo npm install node-red-contrib-modbustcp;
 sudo npm install node-red-contrib-pushbear;
 sudo npm install node-red-contrib-moment;
+sudo npm install node-red-contrib-geofence;
 sudo npm install node-red-contrib-simpletime;
 
 echo "All Done.Restart Nodered!PLEASE CTRL+C!PLEASE CTRL+C!PLEASE CTRL+C!PLEASE CTRL+C!"
