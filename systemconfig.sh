@@ -16,7 +16,7 @@ sudo apt upgrade -y;
 sudo apt install sudo net-tools zip default-libmysqlclient-dev network-manager -y;
 sudo systemctl start NetworkManager.service;
 sudo apt install bluetooth avahi-daemon python3-venv  python3-pip python3-dev libbluetooth-dev build-essential libssl-dev libffi-dev  python-dev libudev-dev -y;
-sudo apt autoremove;
+sudo apt autoremove -y;
 sudo nano /etc/sudoers;
 sudo dpkg-reconfigure tzdata;
 sudo nmtui-edit;
