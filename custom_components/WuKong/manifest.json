@@ -1,0 +1,8 @@
+{
+  "domain": "WuKong",
+  "name": "WuKong Remote",
+  "documentation": "https://bbs.hassbian.com",
+  "dependencies": [],
+  "codeowners": [],
+  "requirements": []
+}
