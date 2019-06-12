@@ -1,0 +1,8 @@
+{
+  "domain": "pfsense",
+  "name": "PfSense device_tracker",
+  "documentation": "https://bbs.hassbian.com",
+  "dependencies": [],
+  "codeowners": [],
+  "requirements": []
+}
