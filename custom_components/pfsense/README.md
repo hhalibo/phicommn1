@@ -15,5 +15,6 @@ SAVE
 
 add to configuration.yaml\
 device_tracker:
-  - platform: pfsense\
+  - platform: pfsense
+
 RESTART HASS
