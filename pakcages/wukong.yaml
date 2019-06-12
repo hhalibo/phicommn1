@@ -1,0 +1,178 @@
+switch:
+  - platform: WuKong
+    host: 192.168.1.149
+    mode: "UDP"
+    PrefixName: "N1" 
+input_boolean:
+  ketingdianshi:
+    name: ketingdianshi 
+    initial: off
+script:
+    cctv01:
+      alias: 中央一台
+      sequence:
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_3
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_0
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_1
+    cctv02:
+      alias: 中央二台
+      sequence:
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_3
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_0
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_2
+    cctv03:
+      alias: 中央三台
+      sequence:
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_3
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_1
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_0
+    cctv04:
+      alias: 中央四台
+      sequence:
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_3
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_1
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_1    
+    cctv05:
+      alias: 体育频道
+      sequence:
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_3
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_1
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_2    
+    cctv06:
+      alias: 电影频道
+      sequence:
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_3
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_1
+        - delay: '00:00:01'
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_3 
+    cctv13:
+      alias: 新闻频道
+      sequence:
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_3
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_2
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_0
+    cctv14:
+      alias: 少儿频道
+      sequence:
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_3
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_2
+        - delay: '00:00:01'
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_2  
+    tvdfws:
+      alias: 东方卫视
+      sequence:
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_3
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_2
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_5 
+    tvhnws:
+      alias: 湖南卫视
+      sequence:
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_3
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_2
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_6
+    tvjsws:
+      alias: 江苏卫视
+      sequence:
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_3
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_2
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_7        
+    tvzjws:
+      alias: 浙江卫视
+      sequence:
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_3
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_2
+        - service: switch.turn_on
+          entity_id: switch.n1_tv_ctl_8           
+          
+homeassistant:
+  customize:
+    input_boolean.ketingdianshi:
+      friendly_name: '客厅电视'
+    switch.n1_tv_ctl_0:
+      friendly_name: '按键0'
+    switch.n1_tv_ctl_1:
+      friendly_name: '按键1'
+    switch.n1_tv_ctl_2:
+      friendly_name: '按键2'
+    switch.n1_tv_ctl_3:
+      friendly_name: '按键3'
+    switch.n1_tv_ctl_4:
+      friendly_name: '按键4'
+    switch.n1_tv_ctl_5:
+      friendly_name: '按键5'
+    switch.n1_tv_ctl_6:
+      friendly_name: '按键6'
+    switch.n1_tv_ctl_7:
+      friendly_name: '按键7'
+    switch.n1_tv_ctl_8:
+      friendly_name: '按键8'
+    switch.n1_tv_ctl_9:
+      friendly_name: '按键9'
+    switch.n1_tv_ctl_back:
+      friendly_name: '返回'
+    switch.n1_tv_ctl_clean:
+      friendly_name: '清理内存'
+    switch.n1_tv_ctl_down:
+      friendly_name: '下'
+    switch.n1_tv_ctl_home:
+      friendly_name: '返回桌面'
+    switch.n1_tv_ctl_left:
+      friendly_name: '左'
+    switch.n1_tv_ctl_menu:
+      friendly_name: '菜单'
+    switch.n1_tv_ctl_ok:
+      friendly_name: 'OK建'
+    switch.n1_tv_ctl_power:
+      friendly_name: '电源'
+    switch.n1_tv_ctl_right:
+      friendly_name: '右'
+    switch.n1_tv_ctl_up:
+      friendly_name: '上'
+    switch.n1_tv_ctl_voldown:
+      friendly_name: '音量减'
+    switch.n1_tv_ctl_volup:
+      friendly_name: '音量加'
+      
+ 
+      
+# group:
+  # CPU_Temperature:
+    # name: 'CPU 信息'
+    # view: no
+    # entities:
+      # - sensor.cpu_temperature
