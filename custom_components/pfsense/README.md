@@ -1,7 +1,7 @@
-PfSense install CRON plugin
-Navigate to the “add” tag and input the following
-###################################
-minute *
+PfSense install CRON plugin\
+Navigate to the “add” tag and input the following\
+###################################\
+minute *\
 hour *
 day of month *
 month of year *
