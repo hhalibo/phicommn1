@@ -9,7 +9,7 @@ day of week *\
 user root\
 ##############################\
 command:\
-/usr/sbin/arp -a > /root/arp.tmp && /usr/local/bin/curl -X POST -F 'data=@/root/arp.tmp' http://192.168.1.200:8123/api/pfsense\
+/usr/sbin/arp -a > /root/arp.tmp && /usr/local/bin/curl -X POST -F 'data=@/root/arp.tmp' http://192.168.1.200:8123/api/pfsense \
 ##############################\
 SAVE\
 
