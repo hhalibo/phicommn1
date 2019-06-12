@@ -13,8 +13,8 @@ command:\
 ##############################\
 SAVE
 
-add to configuration.yaml:
-  device_tracker:
-    - platform: pfsense
+add to configuration.yaml: \
+  \device_tracker:
+     - platform: pfsense \
 
 RESTART HASS
