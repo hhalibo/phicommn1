@@ -42,7 +42,7 @@ python3 -m venv /srv/homeassistant
 echo "Changing to Home Assistant venv"
 source /srv/homeassistant/bin/activate
 echo "Installing latest version of Home Assistant"
-pip3 install pip==19.2.1 netdisco setuptools wheel
+pip3 install pip==19.2.2 netdisco setuptools wheel
 pip3 install websockets
 pip3 install broadlink PyXiaomiGateway
 pip3 install hlk-sw16==0.0.7
