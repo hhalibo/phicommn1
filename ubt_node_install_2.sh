@@ -37,6 +37,7 @@ sudo npm install node-red-dashboard;
 sudo npm install node-red-contrib-modbustcp;
 sudo npm install node-red-contrib-pushbear;
 sudo npm install node-red-contrib-moment;
+sudo npm install node-red-contrib-modbus;
 sudo npm install node-red-contrib-simpletime;
 
 echo "All Done.Restart PLS use 'sudo systemctl status nodered.service' to check"
