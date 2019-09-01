@@ -6,6 +6,7 @@ echo
 
 echo "Running apt-get preparation"
 sudo apt-get update
+sudo apt-get upgrade -y
 
 sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 
