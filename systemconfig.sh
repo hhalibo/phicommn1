@@ -4,10 +4,10 @@ echo
 echo "MUST BE in ROOT，Running System Configurations"
 echo
 
-#echo "stop serial-getty@ttyS0.service"
-#sudo systemctl stop serial-getty@ttyS0.service;
+#echo "stop serial-getty@ttyS2.service"
+#sudo systemctl stop serial-getty@ttyS2.service;
 #sudo systemctl daemon-reload;
-#sudo systemctl disable serial-getty@ttyS0.service;
+#sudo systemctl disable serial-getty@ttyS2.service;
 
 echo "Run apt-update"
 #sudo cp /boot/dtb/BCM4345C0.hcd  /lib/firmware/brcm;
