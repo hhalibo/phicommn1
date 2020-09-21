@@ -6,7 +6,7 @@ echo
 
 echo "Running apt-get preparation"
 sudo apt update;
-sudo apt upgrade -y;
+#sudo apt upgrade -y;
 sudo apt install wget screen git curl -y;
 sudo wget https://github.com/home-assistant/hassbian-scripts/releases/download/v0.6/hassbian-scripts_0.6.deb;
 sleep 5
