@@ -10,7 +10,7 @@ sudo apt update;
 sudo apt install wget screen git curl -y;
 sudo wget https://github.com/home-assistant/hassbian-scripts/releases/download/v0.6/hassbian-scripts_0.6.deb;
 sleep 5
-sudo apt install bluetooth avahi-daemon python3-venv libtiff5-dev libtiff5 libjbig-dev python3-pip python3-dev libbluetooth-dev build-essential libssl-dev libffi-dev  python-dev libudev-dev -y;
+sudo apt install bluetooth avahi-daemon ffmpeg python3-venv libtiff5-dev libtiff5 libjbig-dev python3-pip python3-dev libbluetooth-dev build-essential libssl-dev libffi-dev  python-dev libudev-dev -y;
 sudo dpkg -i  hassbian-scripts_0.6.deb;
 sleep 5
 sudo hassbian-config show;
@@ -42,7 +42,7 @@ python3 -m venv /srv/homeassistant
 echo "Changing to Home Assistant venv"
 source /srv/homeassistant/bin/activate
 echo "Installing latest version of Home Assistant"
-pip3 install pip==20.3 netdisco setuptools wheel
+pip3 install pip==20.3.1 netdisco setuptools wheel
 pip3 install websockets
 pip3 install broadlink PyXiaomiGateway
 pip3 install hlk-sw16==0.0.8
