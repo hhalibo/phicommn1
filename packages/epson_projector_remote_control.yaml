@@ -1,0 +1,79 @@
+switch:
+  - platform: broadlink
+    mac: 34:EA:34:58:82:75
+    switches:
+      - name: Epson_projector_remote
+        command_on: JgCQAAABJpITNhM2FBEUERQRFBEUERQ1FDUUERQ1FBEUNRQRFDUUERQRFBEUERQRFDUUERQRFDYTNhM2EzYUNRQRFDUUNRQRFAAFOQABJ5IUNRQ1FBEUERQRFBEUERQ1FDUUERQ1FBEUNRQRFDYTEhMSExITEhMSEzYTEhMSEzYUNRQ1FDUUNRQRFDUUNRQRFAANBQ==
+        command_off: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+command_line:
+  - binary_sensor:
+      scan_interval: 30
+      name: tuya24
+      command: "/config/ping_171.sh"
+      payload_on: "on"
+      payload_off: "off" 
+input_boolean:
+  epson:
+    name: "爱普生投影机"
+    initial: off
+    icon: mdi:projector
+automation:
+- alias: 爱普生投影机开机
+  description: ""
+  trigger:
+    - platform: state
+      entity_id:
+        - input_boolean.epson
+      to: "on"
+  condition: []
+  action:
+    - choose:
+        - conditions:
+            - condition: state
+              entity_id: binary_sensor.tuya24
+              state: 'off'
+          sequence:
+            - service: switch.turn_on
+              target:
+                entity_id: switch.epson_projector_remote
+        - conditions:
+            - condition: state
+              entity_id: binary_sensor.tuya24
+              state: 'on'
+          sequence:
+            - service: switch.turn_off
+              target:
+                entity_id: switch.epson_projector_remote
+  mode: single
+
+- alias: 爱普生投影机关机
+  description: ""
+  trigger:
+    - platform: state
+      entity_id:
+        - input_boolean.epson
+      to: "off"
+  condition: []
+  action:
+    - choose:
+        - conditions:
+            - condition: state
+              entity_id: binary_sensor.tuya24
+              state: 'on'
+          sequence:
+            - service: switch.turn_on
+              target:
+                entity_id: switch.epson_projector_remote
+            - delay:
+                milliseconds: 1000
+            - service: switch.turn_on
+              target:
+                entity_id: switch.epson_projector_remote
+        - conditions:
+            - condition: state
+              entity_id: binary_sensor.tuya24
+              state: 'off'
+          sequence:
+            - service: switch.turn_off
+              target:
+                entity_id: switch.epson_projector_remote
