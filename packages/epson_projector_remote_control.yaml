@@ -7,16 +7,24 @@ switch:
         command_off: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 command_line:
   - binary_sensor:
+      #platform: command_line
       scan_interval: 30
       name: tuya24
       command: "/config/ping_171.sh"
       payload_on: "on"
       payload_off: "off" 
-input_boolean:
-  epson:
-    name: "爱普生投影机"
-    initial: off
+# input_boolean:
+  # epson:
+    # name: "爱普生投影机"
+    # initial: off
+    # icon: mdi:projector
+input_button:
+  epson_on:
+    name: "投影机开机"
     icon: mdi:projector
+  epson_off:
+    name: "投影机关机"
+    icon: mdi:projector-off
 automation:
 - alias: 爱普生投影机开机
   description: ""
@@ -25,6 +33,8 @@ automation:
       entity_id:
         - input_boolean.epson
       to: "on"
+    - platform: state
+      entity_id: input_button.epson_on
   condition: []
   action:
     - choose:
@@ -53,6 +63,8 @@ automation:
       entity_id:
         - input_boolean.epson
       to: "off"
+    - platform: state
+      entity_id: input_button.epson_off
   condition: []
   action:
     - choose:
